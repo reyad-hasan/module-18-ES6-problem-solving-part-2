@@ -64,7 +64,6 @@ console.log(findUserById(users, 2));
 
 let getCartTotal = (cart)=>{
     let total = cart.reduce((accumulator, elem)=> {
-          console.log(accumulator, elem);
           return accumulator + (elem.price * elem.qty)
     }, 0)
 
