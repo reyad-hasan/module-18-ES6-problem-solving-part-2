@@ -1,13 +1,14 @@
-// Challenge 10 — Cart Items
-// Return only those cart items whose qty > 0.
-const getQuantity = (cart) => {
-    return cart.filter((cart) => cart.qty > 0);
+// Challenge 12 — Find Employee
+// Return the employee whose salary is 50000 or more and whose department is "IT" first.
+const findEmployee = (employee, department, salary) => {
+    return employee.find((person) => person.department === department && person.salary >= salary);
 }
-const cart = [
-    { name: "Pen", price: 20, qty: 3 },
-    { name: "Book", price: 100, qty: 0 },
-    { name: "Bag", price: 500, qty: 2 },
-    { name: "Pencil", price: 10, qty: 0 }
+const employees = [
+    { name: "Rafi", department: "HR", salary: 60000 },
+    { name: "Karim", department: "IT", salary: 40000 },
+    { name: "Hasan", department: "IT", salary: 55000 },
+    { name: "Sakib", department: "IT", salary: 70000 }
 ];
-const result = getQuantity(cart);
-console.log(result);
+const department = 'IT';
+const salary = 50000;
+// console.log(findEmployee(employees, department, salary));
