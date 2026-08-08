@@ -1,14 +1,12 @@
-// Challenge 12 — Find Employee
-// Return the employee whose salary is 50000 or more and whose department is "IT" first.
-const findEmployee = (employee, department, salary) => {
-    return employee.find((person) => person.department === department && person.salary >= salary);
+// Challenge 12 — Count Students
+const countStudents = (students) => {
+    return students.reduce((total, student) => student.passed === true ? total + 1 : total, 0)
 }
-const employees = [
-    { name: "Rafi", department: "HR", salary: 60000 },
-    { name: "Karim", department: "IT", salary: 40000 },
-    { name: "Hasan", department: "IT", salary: 55000 },
-    { name: "Sakib", department: "IT", salary: 70000 }
+const students = [
+    { name: "Rafi", passed: true },
+    { name: "Karim", passed: false },
+    { name: "Hasan", passed: true },
+    { name: "Sakib", passed: true },
+    { name: "Sakib", passed: true }
 ];
-const department = 'IT';
-const salary = 50000;
-// console.log(findEmployee(employees, department, salary));
+console.log(countStudents(students));
